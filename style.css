@@ -1,0 +1,150 @@
+
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: pink;
+}
+
+.wrapper{
+    box-sizing: content-box;
+    width: 26.87em;
+    padding: 20px 30px;
+    background-color: #ffff;
+    position: absolute;
+    /* top: 50%; left: calc(50% - 50px);
+    transform: translate(-50%, -50%); */
+    top: -120%; left: calc(50% - 13.40em);
+     transition: all .5s linear; 
+    border-radius: 7px;
+}
+
+.wrapper.active{
+    top: 10%;
+}
+
+.stas-container{
+    text-align: right;
+    margin-bottom: 1.2em;
+}
+
+.stas-container span{
+    font-weight: 600;
+}
+
+.game-container{
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+}
+
+.card-container{
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+}
+
+.card-before,
+.after{
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+
+.card-before{
+    background-color: #31e1f4;
+    font-weight: bold;
+}
+
+.card-before img{
+    width: 100%;
+    z-index: 4;
+}
+
+.after{
+    background-color: #ffff;
+    transform: rotateY(180deg);
+}
+
+.after img{
+    width: 60%;
+    
+}
+
+.card-container .image{
+    width: 100%;
+}
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .after {
+    transform: rotateY(0deg);
+}
+
+.controls-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #f4c531;
+    top: 0;
+}
+
+button{
+    border: none;
+    border-radius: 0.3em;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.3em;
+    
+}
+
+#stop{
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #000;
+    color: #ffff;
+}
+
+.controls-container button{
+    font-size: 1.3em;
+}
+
+.hide{
+    display: none;
+    transition: all 2s linear;
+}
+
+#result{
+    text-align: center;
+}
+
+#result h2{
+    font-size: 2.5em;
+}
+
+#result h4{
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+}
